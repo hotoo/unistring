@@ -1,0 +1,7 @@
+{
+  "extends": "./tsconfig-base.json",
+  "compilerOptions": {
+    "outDir": "build/es",
+    "target": "esnext"
+  }
+}

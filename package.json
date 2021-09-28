@@ -2,9 +2,10 @@
   "name": "unistring",
   "version": "1.0.0",
   "description": "Unicode String for JavaScript",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "module": "es/index.js",
   "scripts": {
-    "build": "tsc",
+    "build": "tsc --downlevelIteration -p tsconfig-es5.json & tsc --downlevelIteration -p tsconfig-es6.json",
     "test": "make test"
   },
   "repository": {
