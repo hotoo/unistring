@@ -1,0 +1,32 @@
+{
+  "name": "unistring",
+  "version": "1.0.0",
+  "description": "Unicode String for JavaScript",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "test": "make test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hotoo/unistring.git"
+  },
+  "keywords": [
+    "Unicode",
+    "String"
+  ],
+  "author": "闲耘 <hotoo.cn@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hotoo/unistring/issues"
+  },
+  "homepage": "https://github.com/hotoo/unistring#readme",
+  "dependencies": {
+    "multichar-regex": "^2.0.0"
+  },
+  "devDependencies": {
+    "beautify-benchmark": "^0.2.4",
+    "benchmark": "^2.1.4",
+    "typescript": "^4.4.3"
+  }
+}
