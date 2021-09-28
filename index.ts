@@ -44,6 +44,7 @@ class UnicodeString {
   private _matches: string[];
 
   constructor(raw: string) {
+    // @ts-ignore
     this._matches = [ ...raw ];
   }
 
