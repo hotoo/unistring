@@ -1,6 +1,6 @@
 {
-  "name": "unistring",
-  "version": "1.0.0",
+  "name": "@hotoo/unistring",
+  "version": "0.0.1",
   "description": "Unicode String for JavaScript",
   "main": "build/dist/index.js",
   "module": "build/es/index.js",
@@ -10,7 +10,7 @@
   ],
   "scripts": {
     "build": "tsc --downlevelIteration -p tsconfig-es5.json & tsc --downlevelIteration -p tsconfig-es6.json",
-    "test": "make test"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -30,8 +30,15 @@
     "multichar-regex": "^2.0.0"
   },
   "devDependencies": {
+    "@babel/preset-env": "^7.15.6",
+    "@babel/preset-typescript": "^7.15.0",
+    "@types/jest": "^27.0.2",
     "beautify-benchmark": "^0.2.4",
     "benchmark": "^2.1.4",
-    "typescript": "^4.4.3"
+    "emojicharstring": "^0.1.2",
+    "jest": "^27.2.3",
+    "should": "^13.2.3",
+    "typescript": "^4.4.3",
+    "unicode-string": "^2.1.0"
   }
 }
