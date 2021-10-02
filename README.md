@@ -2,23 +2,45 @@
 
 Fast Unicode String.
 
+![benchmark image](https://user-images.githubusercontent.com/143572/135718223-c8f70cd8-7092-4476-8d7e-b8c202f7d930.png)
+
+
 ## USAGE
 
 ```js
-import UniString from 'unistring';
+import unistring from 'unistring';
 
-const str = 'Unicode 😀 String';
-const unistr = new UniString(str);
+const str = '张 𤰉 😀 👦🏿 👨‍👩‍👧 👨‍👩‍👧‍👦';
+const unistr = unistring(str);
 
-str.length; // 17
-unistr.length; // 16
+str.length; // 33
+unistr.length; // 9
 
-str.substr(8, 1); // '�'
-str.substr(8, 2); // '😀'
-unistr.substr(8, 1); // '😀'
+str.substr(2, 1); // '�'
+unistr.substr(2, 1); // '𤰉'
 
-str.split(''); // [ 'U', 'n', 'i', 'c', 'o', 'd', 'e', ' ', '�', '�', ' ', 'S', 't', 'r', 'i', 'n', 'g' ]
-unistr.split(''); // [ 'U, 'n', 'i', 'c', 'o', 'd', 'e', ' ', '😀', ' ', 'S', 't', 'r', 'i', 'n', 'g' ]
+str.substr(5, 1); // '�'
+str.substr(5, 2); // '😀'
+unistr.substr(5, 1); // ' '
+unistr.substr(5, 2); // ' 👦🏿'
+
+str.split('');
+// [ '张', ' ',
+//   '�', '�', ' ',
+//   '�', '�', ' ',
+//   '�', '�', '�', '�', ' ',
+//   '�', '�',  '‍',  '�', '�', '‍',  '�', '�', ' ',
+//   '�', '�', '‍',  '�', '�', '‍', '�',  '�', '‍',  '�', '�'
+// ]
+
+unistr.split('');
+// [ '张', ' ',
+//   '𤰉', ' ',
+//   '😀', ' ',
+//   '👦🏿', ' ',
+//   '👨‍👩‍👧', ' ',
+//   '👨‍👩‍👧‍👦'
+// ]
 ```
 
 ## References
