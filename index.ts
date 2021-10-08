@@ -85,7 +85,7 @@ class UnicodeString {
       return '';
     }
     if (typeof length !== 'number') {
-      length = 0;
+      length = this.length;
     }
     if (length <= 0) {
       return '';
