@@ -9,6 +9,7 @@
     "build/"
   ],
   "scripts": {
+    "prepublishOnly": "npm run build",
     "build": "tsc --downlevelIteration -p tsconfig-es5.json & tsc --downlevelIteration -p tsconfig-es6.json",
     "test": "jest && npx ts-node test/index.benchmark.ts"
   },

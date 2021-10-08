@@ -63,7 +63,7 @@ class UnicodeString {
       return this._matches;
     }
 
-    const uniSep = separator.match(astralRange);
+    const uniSep = separator.match(astralRange) || [];
     const sublen = uniSep.length;
     const list = [];
     let lastIndex = 0;

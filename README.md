@@ -8,8 +8,10 @@ Fast Unicode String.
 ## USAGE
 
 ```js
-import unistring from 'unistring';
+import unistring from '@hotoo/unistring';
 
+// length:   1  2  2  4  8  11
+// unilength:1  1  1  1  1  1
 const str = '张 𤰉 😀 👦🏿 👨‍👩‍👧 👨‍👩‍👧‍👦';
 const unistr = unistring(str);
 
