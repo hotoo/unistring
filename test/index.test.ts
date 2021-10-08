@@ -107,10 +107,13 @@ describe('test/index.test.ts', function() {
     expect(uniCNStr.substring(2, 4)).toBe('张𤰉');
     expect(uniCNStr.substring(2, -1)).toBe('张𤰉');
     expect(uniEmojiStr.substring(1, 3)).toBe('𤰉👨‍👩‍👦');
+    expect(uniEmojiStr.substring(3, 1)).toBe('𤰉👨‍👩‍👦');
     expect(uniEmojiStr.substring(4, 6)).toBe('👦🏿很');
+    expect(uniEmojiStr.substring(6, 4)).toBe('👦🏿很');
     expect(uniEmojiStr.substring(4)).toBe('👦🏿很要好');
     expect(uniEmojiStr.substring(-4)).toBe('张𤰉👨‍👩‍👦和👦🏿很要好');
     expect(uniEmojiStr.substring(-4, 6)).toBe('张𤰉👨‍👩‍👦和👦🏿很');
+    expect(uniEmojiStr.substring(6, -4)).toBe('张𤰉👨‍👩‍👦和👦🏿很');
     expect(uniEmojiStr.substring(-4, -2)).toBe('');
     expect(uniEmojiStr.substring(-4, -1)).toBe('');
   });
