@@ -6,12 +6,14 @@ describe('test/index.test.ts', function() {
   const ceStr = '中文abc';
   const CNStr = '张𤰉张𤰉';
   const emojiStr = '张𤰉👨‍👩‍👦和👦🏿很要好';
+  const emojiStr1 = '最亮的最亮的😘星星❤️';
 
   const uniEnStr = unistring(enStr);
   const uniCnStr = unistring(cnStr);
   const uniCeStr = unistring(ceStr);
   const uniCNStr = unistring(CNStr);
   const uniEmojiStr = unistring(emojiStr);
+  const uniEmojiStr1 = unistring(emojiStr1);
 
   it('length', function() {
     expect(enStr.length).toBe(3);
@@ -28,6 +30,7 @@ describe('test/index.test.ts', function() {
 
     expect(emojiStr.length).toBe(19);
     expect(uniEmojiStr.length).toBe(8);
+    expect(uniEmojiStr1.length).toBe(10);
   });
 
   it('toString', function() {
@@ -36,6 +39,7 @@ describe('test/index.test.ts', function() {
     expect(uniCeStr.toString()).toBe(ceStr);
     expect(uniCNStr.toString()).toBe(CNStr);
     expect(uniEmojiStr.toString()).toBe(emojiStr);
+    expect(uniEmojiStr1.toString()).toBe(emojiStr1);
   });
 
   it('valueOf', function() {
@@ -44,6 +48,7 @@ describe('test/index.test.ts', function() {
     expect(uniCeStr.valueOf()).toBe(ceStr);
     expect(uniCNStr.valueOf()).toBe(CNStr);
     expect(uniEmojiStr.valueOf()).toBe(emojiStr);
+    expect(uniEmojiStr1.valueOf()).toBe(emojiStr1);
   });
 
   it('split("")', function() {
@@ -90,6 +95,7 @@ describe('test/index.test.ts', function() {
     expect(uniEmojiStr.substr(-9)).toBe('张𤰉👨‍👩‍👦和👦🏿很要好');
     expect(uniEmojiStr.substr(-19)).toBe('张𤰉👨‍👩‍👦和👦🏿很要好');
     expect(uniEmojiStr.substr(-20)).toBe('张𤰉👨‍👩‍👦和👦🏿很要好');
+    expect(uniEmojiStr1.substr(-1)).toBe('❤️');
   });
 
   it('substring', function() {
@@ -116,5 +122,6 @@ describe('test/index.test.ts', function() {
     expect(uniEmojiStr.substring(6, -4)).toBe('张𤰉👨‍👩‍👦和👦🏿很');
     expect(uniEmojiStr.substring(-4, -2)).toBe('');
     expect(uniEmojiStr.substring(-4, -1)).toBe('');
+    expect(uniEmojiStr1.substring(9, 10)).toBe('❤️');
   });
 });
