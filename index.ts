@@ -84,8 +84,10 @@ class UnicodeString {
     if (begin < 0 || begin > this.length) {
       return '';
     }
-    // undefined <= 0: false
-    if (typeof length === 'number' && length <= 0) {
+    if (typeof length !== 'number') {
+      length = 0;
+    }
+    if (length <= 0) {
       return '';
     }
     let end = begin + length;
@@ -105,7 +107,7 @@ class UnicodeString {
     }
 
     let after = end;
-    if (typeof end === 'undefined') {
+    if (typeof after !== 'number') {
       after = this.length;
     }
     if (after < 0 || isNaN(after)) {
