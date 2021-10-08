@@ -86,6 +86,10 @@ describe('test/index.test.ts', function() {
     expect(uniEmojiStr.substr(-4, 2)).toBe('👦🏿很');
     expect(uniEmojiStr.substr(-4, -1)).toBe('');
     expect(uniEmojiStr.substr(-6)).toBe('👨‍👩‍👦和👦🏿很要好');
+    expect(uniEmojiStr.substr(-8)).toBe('张𤰉👨‍👩‍👦和👦🏿很要好');
+    expect(uniEmojiStr.substr(-9)).toBe('张𤰉👨‍👩‍👦和👦🏿很要好');
+    expect(uniEmojiStr.substr(-19)).toBe('张𤰉👨‍👩‍👦和👦🏿很要好');
+    expect(uniEmojiStr.substr(-20)).toBe('张𤰉👨‍👩‍👦和👦🏿很要好');
   });
 
   it('substring', function() {
