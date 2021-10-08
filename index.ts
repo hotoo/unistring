@@ -80,20 +80,22 @@ class UnicodeString {
   }
 
   substr(start: number, length?: number): string {
-    const begin = start < 0 ? this.length + start : start;
-    if (begin < 0 || begin > this.length) {
+    let begin = start < 0 ? this.length + start : start;
+    if (begin < 0) {
+      begin = 0;
+    }
+    if (begin >= this.length) {
       return '';
     }
+
     if (typeof length !== 'number') {
       length = this.length;
     }
     if (length <= 0) {
       return '';
     }
+
     let end = begin + length;
-    if (typeof length === 'undefined') {
-      end = this.length;
-    }
     return this._matches.slice(begin, end).join('');
   }
 
